@@ -84,9 +84,9 @@ body {
 
    margin: 0 auto;
    background-color: #425bbf;
-   height: 100%;
+   min-height: 100%;
 
-	box-shadow: 5px 0px 10px 8px #318b5d;
+   box-shadow: 5px 0px 10px 8px #318b5d;
 }
 
 .main-title {
@@ -105,7 +105,7 @@ body {
 }
 
 .list__item:not(:last-child) {
-	margin-bottom: 15px;
+   margin-bottom: 15px;
 }
 
 .list__link {
@@ -115,5 +115,5 @@ body {
 }
 
 .list__link:hover {
-	text-decoration: underline;
+   text-decoration: underline;
 }
