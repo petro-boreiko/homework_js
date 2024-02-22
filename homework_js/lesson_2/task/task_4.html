@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 4</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 4</h1>
+
+			<div class="list__text">
+				<p>
+					Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.
+				</p>
+			</div>
+
+			<script>
+				// Вводимо необхіднв данi
+				const centimetrersValue = 400100
+				const oneMeterHasCentimeters = 100
+				const oneKilometerHasMeters = 1000
+
+
+				// Знаходимо загальну кількість метрів
+				let totalMeters = parseInt(centimetrersValue / oneMeterHasCentimeters)
+
+				// Знаходимо кількість кілометрів
+				let kilometrs = parseInt(totalMeters / oneKilometerHasMeters)
+
+				// Знаходимо скільки залишилося метрів
+				let meters = totalMeters - kilometrs * oneKilometerHasMeters
+
+				console.log(`Довжина: ${kilometrs} кл ${meters} м`);
+			</script>
+		</div>
+	</body>
+
+</html>

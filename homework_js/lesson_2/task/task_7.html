@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 7</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 7</h1>
+
+			<div class="list__text">
+				<p>
+					Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).
+				</p>
+			</div>
+
+			<script>
+
+				// Шукаємо випадковий номер місяця
+				const minMountsNumber = Math.ceil(1);
+				const maxMountsNUmber = Math.floor(12);
+				const randomMount = Math.floor(Math.random() * (maxMountsNUmber - minMountsNumber) + minMountsNumber);
+
+				// Шукаємо випадковий номер дня
+				const minDaysNumber = Math.ceil(0);
+				const maxDaysNumber = Math.floor(6);
+				const randomDay = Math.floor(Math.random() * (maxDaysNumber - minDaysNumber) + minDaysNumber);
+
+				// Розраховуємо суму і виводимо в консоль
+				let sum = randomMount + randomDay
+				console.log(`Сума випадкових номерів місяця(${randomMount}) і дня(${randomDay}): ${sum}`);
+			</script>
+		</div>
+	</body>
+
+</html>

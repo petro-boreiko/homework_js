@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 3</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 3</h1>
+
+			<div class="list__text">
+				<p>
+					Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).
+				</p>
+			</div>
+
+			<script>
+				// Вводимо необхіднв данi
+				const priceProduct = 20
+				const quantityProduct = 7
+				const taxProduct = 5 / 100
+
+
+				// Загальна вартість товару
+				let totalCostProducts = quantityProduct * priceProduct
+				console.log(`Загальна вартість товару: ${totalCostProducts}грн`);
+
+				// Загальне ПДВ товару
+				let totalTaxProducts = totalCostProducts * taxProduct
+				console.log(`Загальна вартість ПДВ товару: ${totalTaxProducts}грн`);
+
+			</script>
+		</div>
+	</body>
+
+</html>
