@@ -76,9 +76,12 @@ body {
    background-color: #c0e04c;
    color: #fff;
    font-size: 22px;
+	display: flex;
+	flex-direction: column;
 }
 
 .wrapper {
+	flex-grow: 1;
    max-width: 1100px;
    padding: 30px 25px;
    margin: 0 auto;
