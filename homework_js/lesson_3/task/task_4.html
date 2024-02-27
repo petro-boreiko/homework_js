@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 4</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 4</h1>
+
+			<div class="list__text">
+				<p>
+					З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом,
+					працівником,
+					пенсіонером).
+				</p>
+			</div>
+
+			<script>
+				// Вводимо необхіднв данi
+				const childrenAge = 6
+				const schollboyAge = 18
+				const studentAge = 23
+				const employeeAge = 59
+
+				const userAge = parseInt(prompt('Введіть свій вік', 1))
+
+				// Проводимо розрахунки і виводимо результат
+				if (userAge >= 0) {
+					if (userAge <= childrenAge) document.write('Ви дитина')
+					else if (userAge <= schollboyAge) document.write('Ви школяр')
+					else if (userAge <= studentAge) document.write('Ви студент')
+					else if (userAge <= employeeAge) document.write('Ви працівник')
+					else document.write('Ви пенсіонер')
+				} else document.write('Ви ввели некоректне значення')
+			</script>
+		</div>
+	</body>
+
+</html>

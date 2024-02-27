@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 7</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 7</h1>
+
+			<div class="list__text">
+				<p>
+					З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься
+				</p>
+			</div>
+
+			<script>
+				// Вводимо необхідні данi
+				const numberMounth = parseInt(prompt('Введіть номер місяця щоб дізнатися яка зараз пора року(1-12)'))
+				const spring = 'Весна'
+				const summer = 'Літо'
+				const autumn = 'Осінь'
+				const winter = 'Зима'
+
+				// Проводимо порівняння і виводимо результат
+				if (0 < numberMounth && numberMounth < 13) {
+					let result
+					switch (true) {
+						case numberMounth < 3: result = winter
+							break;
+						case numberMounth < 6: result = spring
+							break;
+						case numberMounth < 9: result = summer
+							break;
+						case numberMounth < 12: result = autumn
+							break;
+						default: result = winter
+							break;
+					}
+
+					document.write(`На дворі зараз: ${result}`)
+				} else document.write('Введіть коректне значення!')
+			</script>
+		</div>
+	</body>
+
+</html>
