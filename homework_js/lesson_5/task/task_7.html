@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 7</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 7</h1>
+
+			<div class="list__text">
+				<p>
+					Каса. Користувачу повідомляють суму, яку йому треба сплатити. Користувач поступово вводить суму грошей до
+					тих пір, поки
+					суми не буде достатньо для оплати товарів (кожного разу користувачу повідомляють, яку ще суму потрібно
+					ввести).
+				</p>
+			</div>
+
+			<script>
+				// Вводимо необхідні данi
+				const totalPriceProducts = parseInt(prompt('Введіть загальну вартість товарів'))
+				let totalUserMoney = 0
+
+				while (totalUserMoney < totalPriceProducts) {
+					const payMoney = parseFloat(prompt(`Ви маєте заплатити ${totalPriceProducts - totalUserMoney}`))
+					totalUserMoney += payMoney
+				}
+				const divMoney = totalPriceProducts - totalUserMoney
+
+				if (divMoney === 0) document.write(`Ви все сплатили!`)
+				else document.write(`Ви все сплатили! Тримай вашу решту: ${-divMoney}`)
+			</script>
+		</div>
+	</body>
+
+</html>

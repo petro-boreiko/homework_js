@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 5</title>
+	</head>
+
+	<body>
+		<!-- <table style="display: inline-block; margin-right: 20px;" border="2px"></table> -->
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 5</h1>
+
+			<div class="list__text">
+				<p>
+					Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком
+				</p>
+			</div>
+
+			<script>
+				let num = 1
+				for (let i = 0; i < 3; i++) {
+					document.write(`<table style="display: inline-block;  margin-right: 30px;" border="3px">`)
+
+					for (let j = 0; j < 3; j++) {
+						document.write(`<tr>`)
+
+						for (let k = 0; k < 3; k++) {
+							document.write(`<td>${num}</td>`)
+							num++
+						}
+
+						document.write(`</tr>`)
+					}
+
+					document.write(`</table>`)
+				}
+			</script>
+		</div>
+	</body>
+
+</html>
