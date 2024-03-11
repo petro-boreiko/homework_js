@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 5</title>
+	</head>
+
+	<body>
+		<!-- <table style="display: inline-block; margin-right: 20px;" border="2px"></table> -->
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 5</h1>
+
+			<div class="list__text">
+				<p>
+					Написати програму, що виводить на екран таблицю множення на k (k вводиться з клавіатури).
+				</p>
+			</div>
+
+			<script>
+				const userNum = parseInt(prompt('Введіть число'))
+
+				document.write(`<h3>Табличка множення числа ${userNum}</h3>`)
+				document.write(`<table border="2px">`)
+				document.write(`<tr style="width:100%">
+    									<th>${userNum}</th>
+  									</tr>`)
+
+				for (let i = 1; i <= 9; i++) {
+					document.write(`<tr>`)
+
+					document.write(`<td>${i} * ${userNum} =</td > `)
+
+					document.write(`<td>${i * userNum}</td>`)
+
+					document.write(`</tr > `)
+				}
+
+				document.write(`</table >`)
+			</script>
+		</div>
+	</body>
+
+</html>

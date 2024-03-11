@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 1</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 1</h1>
+
+			<div class="list__text">
+				<p>
+					З клавіатури поступово вводяться числа. Знайти суму перших N парних чисел.
+				</p>
+			</div>
+
+			<script>
+				const numberEven = parseInt(prompt('Введіть кількість парних чисел'))
+				let countEven = 0
+				let sum = 0
+				while (countEven < numberEven) {
+					const number = parseInt(prompt('Введіть число'))
+					if (number % 2 === 0) {
+						sum += number
+						countEven++
+					}
+				}
+
+				document.write(`Сума парних чисел: ${sum}`)
+			</script>
+		</div>
+	</body>
+
+</html>
