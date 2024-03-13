@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 2</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 2</h1>
+
+			<div class="list__text">
+				<p> Створити окремі функції, які для 4 чисел знаходять:</>
+				<p>1. суму;</p>
+				<p>2. добуток;</p>
+				<p>3. середнє арифметичне;</p>
+				<p>4. мінімальне значення.</p>
+			</div>
+
+			<script>
+				const num1 = parseFloat(prompt(`Введіть 1 число`))
+				const num2 = parseFloat(prompt(`Введіть 2 число`))
+				const num3 = parseFloat(prompt(`Введіть 3 число`))
+				const num4 = parseFloat(prompt(`Введіть 4 число`))
+
+				// Задача 2.1 Сума
+				function getSum(num1, num2, num3, num4) {
+					return num1 + num2 + num3 + num4
+				}
+
+				let sumNumbers = document.write(`<br>Сума чисел: ${getSum(num1, num2, num3, num4)}`)
+
+				getSum(num1, num2, num3, num4)
+
+				// Задача 2.2 Добуток
+				function getProduct(num1, num2, num3, num4) {
+					return num1 * num2 * num3 * num4
+				}
+
+				let productNumbers = document.write(`<br>Добуток чисел: ${getProduct(num1, num2, num3, num4)}`)
+
+				// Задача 2.3 Середнє арифметичне
+				function getAverage(num1, num2, num3, num4) {
+					return (num1 + num2 + num3 + num4) / 4
+				}
+
+				let paverageNumbers = document.write(`<br>Середнє арифметичне: ${getAverage(num1, num2, num3, num4)}`)
+
+				// Задача 2.4 Mінімальне значення
+				function getMinValue(num1, num2, num3, num4) {
+					let min = Infinity
+					if (min > num1) min = num1
+					if (min > num2) min = num2
+					if (min > num3) min = num3
+					if (min > num4) min = num4
+
+					return min
+				}
+
+				let minValue = document.write(`<br>Mінімальне значення: ${getMinValue(num1, num2, num3, num4)}`)
+			</script>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 1</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 1</h1>
+
+			<div class="list__text">
+				<p>1.1 Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.</p>
+				<p>1.2 Створити функцію, яка за номером місяця повертає його назву.</p>
+				<p>1.3 Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</p>
+			</div>
+
+			<script>
+				const monthNum = parseInt(prompt(`Введіть номер місяця щоб визначити пору року і назву місяця`))
+				const dayNum = parseInt(prompt(`Введіть номер дня`))
+
+				// Задача 1.1 Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+				function getTimeYear(month) {
+					let result = ''
+
+					if (month > 0 && month < 13) {
+						if (month < 3) result = 'Зима'
+						else if (month < 6) result = 'Весна'
+						else if (month < 9) result = 'Літо'
+						else if (month < 12) result = 'Осінь'
+						else result = 'Зима'
+					}
+					else result = 'Некоректне значення'
+
+					return result
+				}
+
+				let timeYear = document.write(`Пора року: ${getTimeYear(monthNum)}`)
+
+				// Задача 1.2  Створити функцію, яка за номером місяця повертає його назву.
+				function getMonthName(numMonth) {
+					let result = ''
+					switch (numMonth) {
+						case 1: result = 'Січень'
+							break;
+						case 2: result = 'Лютий '
+							break;
+						case 3: result = 'Березень '
+							break;
+						case 4: result = 'Квітень '
+							break;
+						case 5: result = 'Травень'
+							break;
+						case 6: result = 'Червень'
+							break;
+						case 7: result = 'Липень'
+							break;
+						case 8: result = 'Серпень'
+							break;
+						case 9: result = 'Вересень'
+							break;
+						case 10: result = 'Жовтень'
+							break;
+						case 11: result = 'Листопад'
+							break;
+						case 12: result = 'Грудень'
+							break;
+
+						default: result = 'Некоректне значення'
+							break;
+					}
+
+					return result
+				}
+
+				let nameMonth = document.write(`<br>Назва місяця: ${getMonthName(monthNum)}`)
+
+
+				// 1.3 Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.
+				function getWorkday(numDay) {
+					let result = ''
+
+					if (numDay > 0 && numDay < 8) {
+						if (numDay < 6)
+							result = 'Робочий'
+						else result = 'Вихідний'
+					}
+					else result = 'Некоректне значення'
+
+					return result
+				}
+
+				let wordDay = document.write(`<br>День тижня: ${getWorkday(dayNum)}`)
+				
+			</script>
+		</div>
+	</body>
+
+</html>

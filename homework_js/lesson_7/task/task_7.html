@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 7</title>
+	</head>
+
+	<body>
+
+
+		<div class="wrapper">
+
+
+
+			<h1 class="main-title">Задача 7</h1>
+
+			<div class="list__text">
+				<p>
+					Створити функцію, яка виводить банер, у функцію передаються: зображення, заголовок та посилання, куди
+					переходимо при кліку на зображення (тег img повине знаходитись у середині тега a)
+
+				</p>
+			</div>
+
+			<style>
+				.banner {
+					width: 300px;
+					height: 150px;
+					padding: 20px;
+					background-color: #fff;
+					border-radius: 5px;
+				}
+
+				.banner__title {
+					color: #000;
+					text-align: center;
+					font-weight: 700;
+					text-shadow: -1px -1px 1px #000;
+				}
+
+				.banner__link {
+					width: 100%;
+					height: 110px;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					transition: transform 0.3s;
+				}
+
+				img:hover {
+					transform: scale(1.1);
+				}
+			</style>
+
+			<script>
+				const titleForBanner = 'Just Do It'
+				const linkBanner = 'https://www.nike.com/pl/'
+				const pathToImage = '../img/nike.png'
+
+				function getBanner(titleForBanner, linkBanner, pathToImage) {
+					const bannerHtml = `
+					<div class="banner">
+						<h3 class="banner__title">${titleForBanner}</h3>
+						<a href="${linkBanner}" class="banner__link">
+							<img src="${pathToImage}" alt="Image">
+						</a>
+					</div>
+					`
+
+					return bannerHtml
+				}
+
+				document.write(getBanner(titleForBanner, linkBanner, pathToImage))
+
+			</script>
+		</div>
+	</body>
+
+</html>

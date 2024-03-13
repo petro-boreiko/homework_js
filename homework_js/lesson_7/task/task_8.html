@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 8</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 8</h1>
+
+			<div class="list__text">
+				<p>
+					Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати кількість
+					від’ємних показів
+					температури.
+				</p>
+			</div>
+
+			<script>
+				const temperatur1 = parseInt(prompt('Введіть температуру №1'))
+				const temperatur2 = parseInt(prompt('Введіть температуру №2'))
+				const temperatur3 = parseInt(prompt('Введіть температуру №3'))
+				const temperatur4 = parseInt(prompt('Введіть температуру №4'))
+				const temperatur5 = parseInt(prompt('Введіть температуру №5'))
+
+				function getNegativeTemperature() {
+					let count = 0
+
+					for (let i = 0; i < arguments.length; i++) {
+
+						const temperature = arguments[i];
+
+						if (temperature < 0) count++
+					}
+
+					return count
+				}
+
+				let negativeTemperature = getNegativeTemperature(temperatur1, temperatur2, temperatur3, temperatur4, temperatur5)
+
+				document.write(`Кількість відємний температур становить: ${negativeTemperature}`)
+			</script>
+		</div>
+	</body>
+
+</html>

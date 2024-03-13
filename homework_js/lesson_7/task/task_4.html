@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 4</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 4</h1>
+
+
+			<div class="list__text">
+				<p>Створити окремі функції, які переводять:</p>
+				<p>4.1 Сантиметри у дюйми;</p>
+				<p>4.2 Кілограми у фунти;</p>
+				<p>4.3 Кілометри у милі.</p>
+			</div>
+
+			<script>
+				const centimeters = parseFloat(prompt('Введіть довжину в сантиметрах'))
+				const kilograms = parseFloat(prompt('Введіть вагу в кг'))
+				const kilometers = parseFloat(prompt('Введіть довжину в кілометрах'))
+
+
+				// 4.1 Сантиметри у дюйми
+				function getLengthInInch(centimeters) {
+					const oneInchCentimeters = 2.54
+					let result = centimeters / oneInchCentimeters
+
+					return result.toFixed(2)
+				}
+
+				let convertCentimetersToInch = document.write(`Кількість дюймів в заданих сантиметрах становить: ${getLengthInInch(centimeters)} дюйма`)
+
+				// 4.2 Кілограми у фунти
+				function getWeightInPounds(centimeters) {
+					const onePoundHasKilograms = 0.453593
+					let result = centimeters / onePoundHasKilograms
+
+					return result.toFixed(2)
+				}
+
+				let convertKilogramsToPounds = document.write(`<br>Кількість фунтів в заданих кілограмах становить: ${getWeightInPounds(kilograms)} фунтів`)
+
+
+
+				// 4.3 Кілометри у милі
+				function getLengthInMiles(kilometers) {
+					const oneMileHasKilometers = 1.609344
+					let result = kilometers / oneMileHasKilometers
+
+					return result.toFixed(3)
+				}
+
+				let convertKilometersToMiles = document.write(`<br>Кількість миль в заданих кілометрах становить: ${getLengthInMiles(kilometers)} милів`)
+
+
+			</script>
+		</div>
+	</body>
+
+</html>

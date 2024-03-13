@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 5</title>
+	</head>
+
+	<body>
+		<!-- <table style="display: inline-block; margin-right: 20px;" border="2px"></table> -->
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 5</h1>
+
+			<div class="list__text">
+				<p>
+					Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється
+					заданим фіксованим
+					повідомленням).
+				</p>
+			</div>
+
+			<style>
+				td {
+					padding: 5px;
+					border: 2px solid black;
+				}
+
+				table {
+					border: 2px solid black;
+				}
+			</style>
+
+			<script>
+				function createTable(rows, columns, message) {
+
+					let table = '<table>'
+					for (let i = 0; i < rows; i++) {
+						table += '<tr>'
+
+						for (let j = 0; j < columns; j++) {
+							table += `<td>${message}</td>`
+						}
+
+						table += '</tr>'
+					}
+
+					table += '</table>'
+
+					return table
+				}
+
+				const userRows = parseInt(prompt('Введіть кількість рядків', 1))
+				const userColumn = parseInt(prompt('Введіть кількість стовпців', 1))
+				const userMessage = prompt('Введіть ваше повідомлення')
+
+				let newTable = document.write(`${createTable(userRows, userColumn, userMessage)}`)
+
+
+			</script>
+		</div>
+	</body>
+
+</html>
