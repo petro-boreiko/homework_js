@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 4</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 4</h1>
+
+
+			<div class="list__text">
+				<p>Дано послідовність номерів автомобілів. Підрахувати кількість номерів, які :</p>
+				<p>починаються на букву «А»;</p>
+				<p>перша і остання літери співпадають;</p>
+				<p>складаються з більше ніш 5 символів;</p>
+			</div>
+
+			<script>
+
+
+				// Функція яка повертає кількість номерів які починаються на 'А'
+				function getCountFirstLeterA(array) {
+					let count = 0
+
+					for (let i = 0; i < array.length; i++) {
+						if (array[i][0].toUpperCase() === 'A') count++
+					}
+
+					return count
+				}
+
+				// Функція яка повертає кількість номерів які де перша і остання літери співпадають
+				function getCountMatchesFirstLastLetters(carNum) {
+					let count = 0
+
+					for (let i = 0; i < carNum.length; i++) {
+						const firstSymbol = carNum[i][0]
+						const lastSymbol = carNum[i][carNum[i].length - 1]
+						if (firstSymbol.toUpperCase() === lastSymbol.toUpperCase()) count++
+					}
+
+					return count
+				}
+
+				// Функція яка повертає кількість номерів які складаються з більше ніш 5 символів
+				function getCountSymbols(carNum) {
+					let count = 0
+
+					for (let i = 0; i < carNum.length; i++) {
+						if (carNum[i].length > 5) count++
+					}
+
+					return count
+				}
+
+				// Створимо функцію яка виводить на екран пдраховані значення
+
+				function displayCountCarsNumber(carsNumber) {
+					const countFirstLetterA = getCountFirstLeterA(carsNumber)
+					const countFirstLastLetterMatches = getCountMatchesFirstLastLetters(carsNumber)
+					const countLetters = getCountSymbols(carsNumber)
+
+					return document.write(`
+					  Кількість номерних знаків які починаються з букви 'А': ${countFirstLetterA}<br>
+					  Кількість номерних знаків які де перша і остання літери співпадають: ${countFirstLastLetterMatches}<br>
+					  Кількість номерних знаків які складаються з більше ніш 5 символів: ${countLetters}<br>
+					`)
+				}
+
+				// Вхідні дані
+				const carNumbers = ['AA456C', 'VA45TV', 'TR34RR', 'A456A', 'WE5678JGW', 'AA487KJ', 'AS346', 'BG785TYB']
+
+				displayCountCarsNumber(carNumbers)
+
+			</script>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 1</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 1</h1>
+
+			<div class="list__text">
+				<p>Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він
+					відноситься
+					(відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча
+					би одна трійка)).
+				</p>
+			</div>
+
+			<script>
+
+				function getAverageValue(values) {
+					let sum = 0
+					for (let i = 0; i < values.length; i++) {
+						sum += values[i]
+					}
+
+					return (sum / values.length).toFixed(1)
+				}
+
+				function getMinGrade(grades) {
+					let min = grades[0]
+					for (let i = 0; i < grades.length; i++) {
+						if (grades[i] < min) min = grades[i]
+					}
+
+					return min
+				}
+
+				function getPositionStudentMinGrade(minGrade) {
+					let positionStudent
+
+					switch (minGrade) {
+						case 5:
+							positionStudent = 'Відмінник'
+							break;
+						case 4:
+							positionStudent = 'Хорошист'
+							break;
+						case 3:
+							positionStudent = 'Трійочник'
+							break;
+
+						default:
+							positionStudent = 'Двійочник'
+							break;
+					}
+
+					return positionStudent
+				}
+
+				function getPositionStudent(grades) {
+					const minGrade = getMinGrade(grades)
+					const position = getPositionStudentMinGrade(minGrade)
+
+					return position
+				}
+
+				// Вхідні дані
+				const gradesStudent = [5,3,5,4,5,4]
+				document.write(`Ваші оцінок: ' ${gradesStudent} '<br>`)
+
+				const averageGrade = getAverageValue(gradesStudent)
+				const positionStudent = getPositionStudent(gradesStudent)
+
+				document.write(`Середній бал становить: ${averageGrade} <br>Ваша категорія: ' ${positionStudent} '`)
+
+
+			</script>
+		</div>
+	</body>
+
+</html>
