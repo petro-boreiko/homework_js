@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 7</title>
+	</head>
+
+	<body>
+
+
+		<div class="wrapper">
+
+
+
+			<h1 class="main-title">Задача 7</h1>
+
+			<div class="list__text">
+				<p>
+					Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30% знижки.
+				</p>
+			</div>
+
+			<script>
+				const prices = [500, 1100, 650, 1200, 2500, 1700, 400, 800, 1400]
+				const discount = (100 - 30) / 100
+
+				prices.forEach((price, i, baseArr) => {
+					if (price > 1000) baseArr[i] = Math.ceil(price * discount)
+				});
+
+				document.write(prices)
+			</script>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 10</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 10</h1>
+
+			<div class="list__text">
+				<p>
+					Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого
+					податку у грн.
+				</p>
+			</div>
+
+			<script>
+				const pricesProducts = [150, 75, 300, 257, 341, 254, 175, 352, 87, 95, 34, 190]
+
+				const taxProducts = pricesProducts.map(price => (price * 0.2).toFixed(2))
+
+				console.log(taxProducts);
+				document.write(taxProducts)
+			</script>
+		</div>
+	</body>
+
+</html>

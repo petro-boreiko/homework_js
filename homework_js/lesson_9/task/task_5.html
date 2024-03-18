@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 5</title>
+	</head>
+
+	<body>
+		<!-- <table style="display: inline-block; margin-right: 20px;" border="2px"></table> -->
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 5</h1>
+
+			<div class="list__text">
+				<p>
+					Дано масив елементів. Знайти добуток додатних елементів
+				</p>
+			</div>
+
+			<script>
+				const numbers = [-12, 1, 3, 23, 7, -6, -5, 4, 2, -8, 2]
+
+				function getProductPositiveNumbers(elements) {
+					let product = 1
+
+					for (const element of elements) {
+						if (element > 0) product *= element
+					}
+
+					return product
+				}
+
+				document.write(getProductPositiveNumbers(numbers))
+			</script>
+		</div>
+	</body>
+
+</html>
