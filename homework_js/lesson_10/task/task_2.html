@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 2</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 2</h1>
+
+			<div class="list__text">
+				<p> Сформувати новий масив, у якому є номери тільки тих, що більші за 1000 грн
+				</p>
+			</div>
+
+			<script>
+				const pricesList = randomNums(1, 10000, 15)
+
+				const numPriceMore1000 = []
+				pricesList.forEach((price, index) => {
+					if (price > 1000) numPriceMore1000.push(index)
+				})
+
+				document.write(`Початкові ціни: ${pricesList}<br>`)
+				document.write(`Результат: ${numPriceMore1000}`)
+			</script>
+		</div>
+	</body>
+
+</html>

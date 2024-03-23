@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 3</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 3</h1>
+
+			<div class="list__text">
+				<p>
+					Сформувати список з тих цін, які більші за попереднє значення
+				</p>
+			</div>
+
+			<script>
+				const pricesList = randomNums(1, 10000, 15)
+
+				let pricesMorePrev = pricesList.filter((price, i, baseArr) => i !== 0 && price > baseArr[i - 1])
+
+				document.write(`Початкові ціни: ${pricesList}<br>`)
+				document.write(`Результат: ${pricesMorePrev}`)
+			</script>
+		</div>
+	</body>
+
+</html>

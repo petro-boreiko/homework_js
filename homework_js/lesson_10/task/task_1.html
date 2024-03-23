@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../style.css">
+		<script src="../js/script.js"></script>
+		<title>Task 1</title>
+
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 1</h1>
+
+			<div class="list__text">
+				<p>Сформувати новий масив, у якому є тільки ті, що більші за 1000 грн.
+				</p>
+			</div>
+
+			<script>
+				const pricesList = randomNums(1, 10000, 15)
+
+				const pricesMore1000 = pricesList.filter(price => price > 1000)
+
+				document.write(`Початкові ціни: ${pricesList}<br>`)
+				document.write(`Результат: ${pricesMore1000}`)
+			</script>
+		</div>
+	</body>
+
+</html>
