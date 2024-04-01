@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 4</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 4</h1>
+
+
+			<div class="list__text">
+				<p>Сформувати новий масив, що міститиме значення цін у відсотках стосовно максимального
+				</p>
+			</div>
+
+			<script>
+				const pricesList = randomNums(1, 10000, 15)
+
+				const maxNum = Math.max(...pricesList)
+
+				let percentForMax = pricesList.map((price) => Math.round(price / maxNum * 100))
+
+				document.write(`Початкові ціни: ${pricesList}<br>`)
+				document.write(`Результат: ${percentForMax}`)
+			</script>
+		</div>
+	</body>
+
+</html>
