@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Додаткові задачі</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Додаткові задачі</h1>
+
+			<div class="list__text">
+				<p>
+					Результати:
+				</p>
+			</div>
+
+			<script>
+				// 1. Заполнить массив нулями, кроме первого и последнего элементов, которые должны быть равны единице.
+
+				// let listNums = new Array(7)
+				// listNums.fill(1)
+				// listNums.fill(0, 1, listNums.length - 1)
+
+				// document.write(listNums)
+
+				// 2. Заполнить массив нулями и единицами, при этом данные значения чередуются, начиная с нуля.
+
+				// let listNums = new Array(5)
+
+				// for (let i = 0; i < listNums.length; i++) {
+				// 	if (i % 2 === 0) listNums[i] = 0
+				// 	else listNums[i] = 1
+				// }
+
+				// document.write(listNums)
+
+				// 3.Сформировать возрастающий массив из четных чисел.
+
+				// let randomNum = 1 + Math.floor(Math.random() * 30)
+				// let listNums = []
+				// for (let i = 1; i <= randomNum; i++) {
+				// 	if (i % 2 === 0) listNums.push(i)
+				// }
+
+				// document.write(listNums)
+
+				// 4. Сформировать убывающий массив из чисел, которые делятся на 3.
+
+				// let randomNum = 1 + Math.floor(Math.random() * 25)
+				// let listNums = []
+
+				// for (let i = randomNum; i > 0; i--) {
+				// 	if (i % 3 === 0) listNums.push(i)
+				// }
+
+				// document.write(listNums)
+
+				// 5. Создать массив, на четных местах в котором стоят единицы, а на нечетных местах - числа, равные остатку от деления своего номера на 5.
+
+				// let randomNum = 1 + Math.floor(Math.random() * 25)
+				// let listNums = new Array(randomNum)
+
+				// for (let i = 0; i < listNums.length; i++) {
+				// 	if (i !== 0 && i % 2 === 0) listNums[i] = 1
+				// 	else listNums[i] = i % 5
+				// }
+
+				// document.write(listNums)
+
+				// 6. Создать массив, который одинаково читается как слева направо, так и справа налево.
+				// let randomNum = 1 + Math.floor(Math.random() * 10)
+				// let listNums = []
+
+				// for (let i = randomNum; i >= 0; i--) {
+				// 	listNums.push(i)
+				// 	listNums.unshift(i)
+				// }
+				// document.write(listNums)
+
+				// let listNums = [12, 23, 54, 34, 90, 34, 300, 67, 32, 56, 95, 1, 56, 61, 333, 98, 105, 130, 346, 36]
+				// 7.Определить, содержит ли массив данное число x 
+
+				// if (listNums.includes(21)) document.write('Yes')
+				// else document.write('No')
+
+				// 8. Найти количество четных чисел в массиве.
+
+				// let countEven = listNums.reduce((prevValue, num) => num % 2 === 0 ? prevValue + 1 : prevValue,
+				// 	0)
+				// document.write(countEven)
+
+				// 9. Найти количество чисел в массиве, которые делятся на 3, но не делятся на 7.
+
+				// let countNum = listNums.reduce((prevValue, num) => num % 3 === 0 && num % 7 !== 0 ? prevValue + 1 : prevValue,
+				// 	0)
+				// document.write(countNum)
+
+				// 10. Найдите сумму четных чисел массива.
+				// let sumEven = listNums.reduce((prevNum, num) => num % 2 === 0 ? prevNum + num : prevNum,
+				// 	0)
+
+				// document.write(sumEven)
+
+				// 11. Найдите сумму чисел массива, которые стоят на четных местах.
+				// let sumEvenIndex = listNums.reduce((prevNum, num, index) => index % 2 === 0 ? prevNum + num : prevNum,
+				// 	0)
+				// 	document.write(sumEvenIndex)
+
+				// 12. Найдите сумму чисел массива, которые стоят на нечетных местах и при этом превосходят сумму крайних элементов массива.
+
+				// const sumFirstLastElem = listNums[0] + listNums.at(-1)
+
+				// let sumOdd = listNums.reduce((prevNum, num, index) => index % 2 !== 0 && num > sumFirstLastElem ? prevNum + num : prevNum, 0)
+
+				// document.write(sumOdd)
+
+				// 13. Найдите сумму наибольшего и наименьшего элементов массива.
+				// const min = Math.min(...listNums)
+				// const max = Math.max(...listNums)
+
+				// let sumMinMax = min + max
+				// document.write(sumMinMax)
+
+				// 14. Среди элементов с нечетными номерами найдите наибольший элемент массива, который делится на 3.
+				// let maxOddNum = listNums.reduce((max, num, index) => {
+				// 	if (index !== 0 && index % 2 === 0 && max < num && num % 3 === 0) return max = num
+				// 	else return max
+				// })
+
+				// document.write(maxOddNum)
+				let listNums = [12, 23, 54, 34, 90, 34, 300, 67, 32, 56, 95, 1, 56, 61, 333, 98, 105, 130, 346, 36]
+				// 15. В массиве заменить все числа, большие данного числа, на среднее арифметическое всех чисел массива.
+				// let maxNum = Math.max(...listNums)
+				// let ourNum = 1 + Math.floor(Math.random() * maxNum)
+
+				// function getAveregeNums(numbers) {
+				// 	let sum = 0
+				// 	for (const num of numbers) {
+				// 		sum += num
+				// 	}
+
+				// 	return Math.round(sum / numbers.length)
+				// }
+
+				// let averegeNums = getAveregeNums(listNums)
+
+				// let changeListNums = listNums.map(num => num > ourNum ? num = averegeNums : num)
+
+				// document.write(`Наш масив чисел: ${listNums}<br>`)
+				// document.write(`Наше число: ${ourNum}<br>`)
+				// document.write(`Середнє число: ${averegeNums}<br>`)
+				// document.write(`Результат: ${changeListNums}<br>`)
+
+				// 16. Дан массив. Заменить все числа, меньшие последнего элемента массива, на первый элемент.
+				// let changeListNums = listNums.map((num, index, baseArr) => num < baseArr.at(-1) ? num = baseArr[0] : num)
+
+				// document.write(changeListNums)
+
+				// 17. Поменять местами наибольший и наименьший элементы массива.
+
+				let minNum = Math.min(...listNums)
+				let maxNum = Math.max(...listNums)
+
+				let indexMinNum = listNums.indexOf(minNum)
+				let indexMaxNum = listNums.indexOf(maxNum)
+
+				listNums[indexMaxNum] = minNum
+				listNums[indexMinNum] = maxNum
+
+				document.write(listNums)
+			</script>
+		</div>
+	</body>
+
+</html>

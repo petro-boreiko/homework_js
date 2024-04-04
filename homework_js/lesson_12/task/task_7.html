@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 7</title>
+	</head>
+
+	<body>
+
+
+		<div class="wrapper">
+
+
+
+			<h1 class="main-title">Задача 7</h1>
+
+			<div class="list__text">
+				<p>
+					Визначати, чи усі ціни більше за 1000
+				</p>
+			</div>
+
+			<script>
+				const pricesList = randomNums(1, 10000, 15)
+				document.write(`Початкові ціни: ${pricesList}<br>`)
+
+				if (pricesList.every((price) => price > 1000)) document.write('Відповідь: Так')
+				else document.write('Відповідь: Ні')
+			</script>
+		</div>
+	</body>
+
+</html>

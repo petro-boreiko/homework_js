@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 4</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 4</h1>
+
+
+			<div class="list__text">
+				<p>Для розглянутих методів сортування спробувати вивести етапи сортування шляхом виведення відповідних
+					таблиць за зразком .</p>
+				<img src="../img/01.png" alt="Image">
+				<p>
+					Тобто кожного разу після обміну елементів вивести поточний стан масиву на екран (стрілки не потрібні).
+				</p>
+			</div>
+
+			<script>
+				let arr = [3, 5, 1, 4, 2]
+
+				document.write(`Початковий масив: [${arr}]<br>`)
+
+				// Бульбашковий метод
+				let arr1 = [...arr]
+				document.write('Бульбашковий метод<br>')
+				let changed
+				do {
+					changed = false
+					for (let i = 1; i < arr1.length; i++) {
+
+						if (arr1[i - 1] > arr1[i]) {
+							let temp = arr1[i - 1]
+							arr1[i - 1] = arr1[i]
+							arr1[i] = temp
+							changed = true
+							document.write(`[${arr1}]<br>`)
+						}
+
+					}
+				} while (changed)
+
+				// Метод змішування
+				document.write('Метод змішування<br>')
+				let arr2 = [...arr]
+				let leftIndex = 0
+				let rightIndex = arr2.length - 1
+
+				while (leftIndex < rightIndex) {
+					let change = false
+
+					for (let i = leftIndex; i < rightIndex; i++) {
+						if (arr2[i] > arr2[i + 1]) {
+							swap(arr2, i + 1, i)
+							change = true
+							document.write(`[${arr2}]<br>`)
+						}
+					}
+
+					rightIndex--
+					if (!change) break
+
+					for (let i = rightIndex; i > leftIndex; i--) {
+
+						if (arr2[i] < arr2[i - 1]) {
+							swap(arr2, i, i - 1)
+							change = true
+							document.write(`[${arr2}]<br>`)
+						}
+					}
+
+					leftIndex++
+					if (!change) break
+				}
+
+				// Метод включення
+				document.write('Метод включення<br>')
+
+				let arr3 = [...arr]
+				for (let i = 1; i < arr3.length; i++) {
+					let element = arr3[i];
+					let k = i - 1
+
+					while (k >= 0 && arr3[k] > element) {
+						arr3[k + 1] = arr3[k]
+						k--
+					}
+
+					arr3[k + 1] = element
+					document.write(`[${arr3}]<br>`)
+				}
+			</script>
+		</div>
+	</body>
+
+</html>
