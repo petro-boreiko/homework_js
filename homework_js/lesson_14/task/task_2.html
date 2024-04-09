@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 2</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 2</h1>
+
+			<div class="list__text">
+				<p>
+					Розробити функцію, у яку передають об’єкт (день, місяць, рік). Визначити, який буде рік
+					через N місяців.
+					</з>
+			</div>
+
+			<script>
+
+				let enterMonth = parseInt(prompt("Введіть кількість місяців"))
+
+				function getYear({ month, year }, numMonth) {
+					let countMonth = month - 1 + numMonth
+					let yearWeGet = year + Math.floor(countMonth / 12)
+					return yearWeGet
+				}
+
+				const presentDate = {
+					day: 9,
+					month: 4,
+					year: 2024
+				}
+
+				let resultYear = getYear(presentDate, enterMonth)
+
+				document.write(`Дата від якої починається відлік: ${presentDate.day}.${presentDate.month}.${presentDate.year}<br>`)
+
+				if (resultYear > presentDate.year) document.write(`Через ${enterMonth} місяців буде: ${resultYear}рік`)
+				else document.write('Рік незмінився')
+				
+			</script>
+		</div>
+	</body>
+
+</html>
