@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 4</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 4</h1>
+
+
+			<div class="list__text">
+				<p>
+					Розробити клас MultChecker для перевірки таблиці множення
+				</p>
+				<p>
+					<img src="../img/02.png" alt="Image">
+				</p>
+			</div>
+
+			<script>
+				class MultChecker {
+					constructor(number, numberCorrectAnswers = 0, numberWrongAnswers = 0) {
+						this.number = number
+						this.numberCorrectAnswers = numberCorrectAnswers
+						this.numberWrongAnswers = numberWrongAnswers
+					}
+
+					getRandomSecondNum() {
+						return 1 + Math.floor(Math.random() * 9)
+					}
+
+					chekingCorrectAnswer() {
+						let randomNum = this.getRandomSecondNum()
+						let userAnswer = parseInt(prompt(`${this.number} * ${randomNum}`))
+						if (userAnswer === randomNum * this.number) this.numberCorrectAnswers++
+						else this.numberWrongAnswers++
+					}
+
+					displayInformTest() {
+						document.write(`Число, яке перевіряємо: ${this.number}<br>
+						Кількість правильних відповідей: ${this.numberCorrectAnswers}<br>
+						Кількість неправильних відповідей: ${this.numberWrongAnswers}<br>
+						`)
+					}
+				}
+				let randomNum = 1 + Math.floor(Math.random() * 9)
+				let checkingNum = new MultChecker(randomNum)
+
+				for (let i = 0; i < randomNum; i++) {
+					checkingNum.chekingCorrectAnswer()
+				}
+
+				checkingNum.displayInformTest()
+			</script>
+		</div>
+	</body>
+
+</html>

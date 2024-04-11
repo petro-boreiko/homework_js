@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 2</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 2</h1>
+
+			<div class="list__text">
+				<p> Створити об’єкт «Тир». У масиві зберігаються 1, якщо у цьому квадраті є заєць і 0 в іншому
+					випадку.
+				</p>
+			</div>
+
+			<script>
+				// Вихідні дані 
+				let x = parseInt(prompt('Введіть кординату по осі X ві 1 до 3'))
+				let y = parseInt(prompt('Введіть кординату по осі Y ві 1 до 3'))
+				let game = {
+					gameField: [[1, 0, 0], [1, 1, 1], [0, 1, 0]],
+					gameRules: function (positionX, positionY) {
+						return this.gameField[positionX - 1][positionY - 1] === 1
+					}
+				}
+				document.write(`Ігрове поле: <br>
+				[${game.gameField[0]}]<br>
+				[${game.gameField[1]}]<br>
+				[${game.gameField[2]}]<br> <br>`)
+
+				document.write(`Ваші координати пострілу X - ${x}, Y - ${y}<br>`)
+
+				if (game.gameRules(x, y)) document.write('Ви влучили')
+				else document.write('Ви не влучили')
+			</script>
+		</div>
+	</body>
+
+</html>

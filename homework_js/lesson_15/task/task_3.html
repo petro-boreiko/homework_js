@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="../js/script.js"></script>
+		<link rel="stylesheet" href="../style.css">
+		<title>Task 3</title>
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<h1 class="main-title">Задача 3</h1>
+
+			<div class="list__text">
+				<p>
+					Створити об’єкт «Авто».<br>
+					<img src="../img/01.png" alt="Image">
+				</p>
+			</div>
+
+			<script>
+				let car = {
+					brand: 'Bogdan',
+					tankSize: 80,
+					availableLiters: 55,
+					numSeats: 24,
+					numPassengers: 18,
+
+					refuelingLiters: function (numLiters) {
+						return this.availableLiters + numLiters <= this.tankSize
+					},
+
+					displayNumPassebgers: function () {
+						document.write(`2) Кількість пасажирів становить: ${this.numPassengers}<br>`)
+					},
+
+					addingPassengers: function (passengers) {
+						return this.numPassengers + passengers >= this.numSeats
+					},
+
+					disembarkationPassengers: function (passengers) {
+						return this.numPassengers - passengers
+					}
+				}
+
+				// Заправка на вказану кількість літрів
+				if (car.refuelingLiters(20)) document.write('1) Можлива дозапрвка<br>')
+				else document.write('1) Ви вказали більшу кількість літрів ніж ще можна дозаправити<br>')
+
+				// Виведення кількості пасажирів
+				car.displayNumPassebgers()
+
+				// Додавання пасажирів
+				if (car.addingPassengers(5)) document.write('3) Можна ще взяти пасажирів<br>')
+				else document.write('3) Недостатньо місць для вказаної кількості пасажирів<br>')
+
+				// Висадка пасажирів
+				document.write(`4) Після висадки залишилося пасажирів: ${car.disembarkationPassengers(7)}`)
+			</script>
+		</div>
+	</body>
+
+</html>
